@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './styles/App.css';
 import AboutUs      from './footer.jsx'
 import Header       from './header/header.jsx'
-import PhotoList    from './body/body.jsx'
-// import Body         from './body/body.jsx'
+import Body    from './body/body.jsx'
+
 
 require('dotenv').config()
 
@@ -62,7 +62,7 @@ class App extends Component {
   }
 
   getVenueDetails = (venues) => {
-    console.log(this.state)
+
     const request = require('request');
     let allVenueDetails = []
     for (let venue of venues) {
@@ -86,8 +86,30 @@ class App extends Component {
   }
 
   displayVenue = (venue) => {
-    this.setState({status: "display-venue", displayingVenue: venue})
+
+    const request = require('request');
+
+      request({
+        url: `https://api.foursquare.com/v2/venues/${venue.id}/photos`,
+        method: 'GET',
+        qs: {
+          client_id: process.env.REACT_APP_CLIENT_ID,
+          client_secret: process.env.REACT_APP_CLIENT_SECRET,
+          v: '20180323',
+        }
+      }, function(err, res, body) {
+        if (err) {
+          console.error(err);
+        } else {
+          console.log(JSON.parse(body).response)
+         this.setState({status: "display-venue", displayingVenue: venue})
+        }
+      }.bind(this));
+
+
   }
+
+
 
   handleVenueChange = (event) => {
     this.setState({searchTerms:
@@ -115,7 +137,7 @@ class App extends Component {
         state={this.state}
         />
 
-        <PhotoList
+        <Body
         state={this.state}
         displayVenue={this.displayVenue}
         reSearching={this.reSearching}

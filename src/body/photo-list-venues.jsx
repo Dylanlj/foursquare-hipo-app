@@ -1,48 +1,84 @@
 import React, { Component } from 'react';
-import Tips             from './tips-list.jsx'
-
+import RecentSearches   from './recent-search-list.jsx'
 class PhotoListVenues extends Component {
+
   render () {
+    let venues = this.props.state.venues
 
-    let list = [];
-console.log(this.props.state.displayingVenue)
-    if (this.props.state.displayingVenue.photos.groups[0]) {
-      let venuePhotos = this.props.state.displayingVenue.photos.groups[0].items
+    let list = []
+      for (let venue of venues) {
+        let image
+        let ratingPresence = "venue-list-rating-square no-rating"
 
-      for (let venuePhoto of venuePhotos) {
-        let image = `${venuePhoto.prefix}300x300${venuePhoto.suffix}`
-        let userImage = "";
-        if (venuePhoto.user) {
-          userImage =
-          <div className="photo-by-user">
-            <div className="user-photo-square">
-              <img className="user-photo" src={`${venuePhoto.user.photo.prefix}300x300${venuePhoto.user.photo.suffix}`} alt="user"/>
-            </div>
-            <div className="user-name">
-              {venuePhoto.user.firstName}
-              {venuePhoto.user.lastName}
-            </div>
-          </div>
+        let visualTierLevels = [<div className="bar tier-one" key={venue.id + "1"}/>]
+        if (venue.price) {
+          if (venue.price.tier >=2) {
+            visualTierLevels.push(<div className="bar tier-two" key={venue.id + "2"}/>)
+          }
+          if (venue.price.tier >=3) {
+            visualTierLevels.push(<div className="bar tier-three" key={venue.id + "3"}/>)
+          }
+          if (venue.price.tier >=4) {
+            visualTierLevels.push(<div className="bar tier-four" key={venue.id + "4"}/>)
+          }
+        } else {
+          visualTierLevels = ""
         }
 
+
+        let visualPriceTier = (
+          <span className="base" >
+            {visualTierLevels}
+          </span>)
+
+        if (venue.rating) {
+          ratingPresence = "venue-list-rating-square"
+        }
+        if(venue.bestPhoto) {
+          image = `${venue.bestPhoto.prefix}300x300${venue.bestPhoto.suffix}`
+        } else {
+          image = "http://www.seetorontonow.com/wp-content/uploads/2018/03/toronto-flatiron-building-copyright-@nguxentravels-from-instagram.jpg"
+        }
         list.push(
-          <div className="venue-list-item" key={venuePhoto.id} >
-            <img className="venue-list-image" key={venuePhoto.id} src={image} alt="venue"/>
-            {userImage}
+          <div className="venue-list-item" key={venue.id} onClick={() => {this.props.displayVenue(venue)}}>
+
+            <img className="venue-list-image" key={venue.id} src={image} alt="venue"/>
+              <div className={ratingPresence}>
+                <div className="venue-list-rating">
+                  {venue.rating}
+                </div>
+              </div>
+            <div className="venue-name">{venue.name}</div>
+            <div className="people-count">
+              <div className="divider"></div>
+
+              <div className="material-icons">person</div>
+              {" " + venue.hereNow.count}
+              <span className="price-tier">
+                <div className="material-icons">label</div>
+                {visualPriceTier}
+              </span>
+            </div>
           </div>
         )
       }
-    }
 
 
     return (
-        <div className="venue-list">
-          {list}
-          <Tips venueTips={this.props.state.displayingVenue.tips.groups}/>
-      </div>
+        <div>
+          <RecentSearches
+            searches={this.props.state.previousSearches}
+            reSearching={this.props.reSearching}
+            />
+          <div className="venue-list venue">
+              {list}
+          </div>
+        </div>
+
 
       )
+
   }
 }
 
-export default PhotoListVenues
+export default PhotoListVenues;

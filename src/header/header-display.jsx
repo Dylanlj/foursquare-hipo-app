@@ -10,7 +10,7 @@ class HeaderDisplay extends Component  {
     let image = "http://www.seetorontonow.com/wp-content/uploads/2018/03/toronto-flatiron-building-copyright-@nguxentravels-from-instagram.jpg"
 
     if (venue.bestPhoto) {
-      image = `${venue.bestPhoto.prefix}500x234${venue.bestPhoto.suffix}`
+      image = `${venue.bestPhoto.prefix}500x235${venue.bestPhoto.suffix}`
     }
     let categoryIcon = `${venue.categories[0].icon.prefix}64${venue.categories[0].icon.suffix}`
     let venueRating = ""
@@ -23,16 +23,22 @@ class HeaderDisplay extends Component  {
         </div>)
     }
 
-    let visualTierLevels = [<div className="bar tier-one"/>]
+console.log(this.props.state)
+    let phoneNumber = ""
+    if (venue.contact.phone) {
+      phoneNumber = (" " + venue.contact.phone)
+    }
+
+    let visualTierLevels = [<div className="bar tier-one" key={venue.id + "1"}/>]
 
     if (venue.price.tier >=2) {
-      visualTierLevels.push(<div className="bar tier-two"/>)
+      visualTierLevels.push(<div className="bar tier-two" key={venue.id + "2"}/>)
     }
     if (venue.price.tier >=3) {
-      visualTierLevels.push(<div className="bar tier-three"/>)
+      visualTierLevels.push(<div className="bar tier-three" key={venue.id + "3"}/>)
     }
     if (venue.price.tier >=4) {
-      visualTierLevels.push(<div className="bar tier-four"/>)
+      visualTierLevels.push(<div className="bar tier-four" key={venue.id + "4"}/>)
     }
 
     let visualPriceTier = (
@@ -59,8 +65,8 @@ class HeaderDisplay extends Component  {
           </div>
           <div className="venue-info">
             <div className="material-icons">call </div>
-            {" " + venue.contact.formattedPhone}
-            </div>
+            {phoneNumber}
+          </div>
           <div className="venue-info">
             <div className="material-icons">person </div>
             {" " + venue.hereNow.count}
