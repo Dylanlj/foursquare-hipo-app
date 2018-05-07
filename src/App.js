@@ -62,6 +62,7 @@ class App extends Component {
   }
 
   getVenueDetails = (venues) => {
+    console.log(this.state)
     const request = require('request');
     let allVenueDetails = []
     for (let venue of venues) {

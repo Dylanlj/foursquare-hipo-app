@@ -76,13 +76,20 @@
 .venue-info-bar {
   position: absolute;
   top: 486px;
-  height: 80px;
   width: 1280px;
   text-align: left;
   height: 115px;
   object-fit: contain;
 
-  background-image: linear-gradient(95deg, #1e0db4, #e44747);
+
+}
+
+.background-gradient {
+  position: absolute;
+    height: 115px;
+  width: 1280px;
+  opacity: 0.8;
+   background-image: linear-gradient(95deg, #1e0db4, #e44747);
 }
 
 .venue-title {

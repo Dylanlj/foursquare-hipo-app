@@ -4,7 +4,9 @@ import Tips             from './tips-list.jsx'
 class PhotoListVenues extends Component {
   render () {
 
-let list = [];
+    let list = [];
+console.log(this.props.state.displayingVenue)
+    if (this.props.state.displayingVenue.photos.groups[0]) {
       let venuePhotos = this.props.state.displayingVenue.photos.groups[0].items
 
       for (let venuePhoto of venuePhotos) {
@@ -30,6 +32,9 @@ let list = [];
           </div>
         )
       }
+    }
+
+
     return (
         <div className="venue-list">
           {list}

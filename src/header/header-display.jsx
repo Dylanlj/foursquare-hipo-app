@@ -5,38 +5,40 @@ class HeaderDisplay extends Component  {
   render () {
 
 
-      let venue = this.props.state.displayingVenue
+    let venue = this.props.state.displayingVenue
 
-      let image = `${venue.bestPhoto.prefix}500x234${venue.bestPhoto.suffix}`
-      let categoryIcon = `${venue.categories[0].icon.prefix}64${venue.categories[0].icon.suffix}`
-      let venueRating = ""
-      if (venue.rating) {
-        venueRating = (
-          <div classID="venue-rating-square">
-            <div className="venue-rating">
-              {venue.rating}
-            </div>
-          </div>)
-      }
+    let image = "http://www.seetorontonow.com/wp-content/uploads/2018/03/toronto-flatiron-building-copyright-@nguxentravels-from-instagram.jpg"
 
-        let visualTierLevels = [<div className="bar tier-one"/>]
+    if (venue.bestPhoto) {
+      image = `${venue.bestPhoto.prefix}500x234${venue.bestPhoto.suffix}`
+    }
+    let categoryIcon = `${venue.categories[0].icon.prefix}64${venue.categories[0].icon.suffix}`
+    let venueRating = ""
+    if (venue.rating) {
+      venueRating = (
+        <div classID="venue-rating-square">
+          <div className="venue-rating">
+            {venue.rating}
+          </div>
+        </div>)
+    }
 
-        if (venue.price.tier >=2) {
-          visualTierLevels.push(<div className="bar tier-two"/>)
-        }
-        if (venue.price.tier >=3) {
-          visualTierLevels.push(<div className="bar tier-three"/>)
-        }
-        if (venue.price.tier >=4) {
-          visualTierLevels.push(<div className="bar tier-four"/>)
-        }
+    let visualTierLevels = [<div className="bar tier-one"/>]
 
-        let visualPriceTier = (
-          <span className="base">
-            {visualTierLevels}
-          </span>)
+    if (venue.price.tier >=2) {
+      visualTierLevels.push(<div className="bar tier-two"/>)
+    }
+    if (venue.price.tier >=3) {
+      visualTierLevels.push(<div className="bar tier-three"/>)
+    }
+    if (venue.price.tier >=4) {
+      visualTierLevels.push(<div className="bar tier-four"/>)
+    }
 
-
+    let visualPriceTier = (
+      <span className="base">
+        {visualTierLevels}
+      </span>)
 
     return (
       <div className="display-venue">
@@ -49,6 +51,7 @@ class HeaderDisplay extends Component  {
         </div>
         <img src={DisplayLogo} alt="logo" className="display-venue-logo" />
         <div className="venue-info-bar">
+          <div className="background-gradient"/>
           <div className="venue-title">{venue.name}</div>
           <div className="venue-info">
             <div className="material-icons">place </div>
