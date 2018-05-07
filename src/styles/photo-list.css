@@ -1,5 +1,6 @@
 .venue-list {
-  margin-left: 10%;
+  position: relative;
+  left: 13%;
   margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;

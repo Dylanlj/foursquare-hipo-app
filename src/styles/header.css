@@ -11,7 +11,7 @@
 .venue-rating-square {
   position: absolute;
   top: 453px;
-  left: 860px;
+  right: 15%;
   width: 65px;
   height: 65px;
   object-fit: contain;
@@ -29,7 +29,7 @@
 .display-venue-logo {
   position: absolute;
   top: -30px;
-  left: 600px;
+  left: 50%;
   width: 420px;
   height: 228px;
   object-fit: contain;
@@ -50,7 +50,7 @@
 .category-icon-square {
   background: url(/images/classy_fabric.png);
   position: absolute;
-  left: 595px;
+  left: 49%;
   top: 119px;
   width: 160px;
   height: 160px;

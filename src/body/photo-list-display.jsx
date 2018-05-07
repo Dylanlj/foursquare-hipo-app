@@ -35,9 +35,11 @@ class PhotoListDisplay extends Component {
 
 
     return (
+      <div>
         <div className="venue-list">
           {list}
-          <Tips venueTips={this.props.state.displayingVenue.tips.groups}/>
+        </div>
+        <Tips venueTips={this.props.state.displayingVenue.tips.groups}/>
       </div>
 
       )
