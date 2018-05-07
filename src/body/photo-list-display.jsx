@@ -7,20 +7,19 @@ class PhotoListDisplay extends Component {
 
     let list = []
       for (let venue of venues) {
-            console.log(venue)
         let image
         let ratingPresence = "venue-list-rating-square no-rating"
 
-        let visualTierLevels = [<div className="bar tier-one"/>]
+        let visualTierLevels = [<div className="bar tier-one" key={venue.id + "1"}/>]
         if (venue.price) {
           if (venue.price.tier >=2) {
-            visualTierLevels.push(<div className="bar tier-two"/>)
+            visualTierLevels.push(<div className="bar tier-two" key={venue.id + "2"}/>)
           }
           if (venue.price.tier >=3) {
-            visualTierLevels.push(<div className="bar tier-three"/>)
+            visualTierLevels.push(<div className="bar tier-three" key={venue.id + "3"}/>)
           }
           if (venue.price.tier >=4) {
-            visualTierLevels.push(<div className="bar tier-four"/>)
+            visualTierLevels.push(<div className="bar tier-four" key={venue.id + "4"}/>)
           }
         } else {
           visualTierLevels = ""

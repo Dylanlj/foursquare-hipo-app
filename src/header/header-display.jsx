@@ -12,7 +12,7 @@ class HeaderDisplay extends Component  {
       let venueRating = ""
       if (venue.rating) {
         venueRating = (
-          <div className="venue-rating-square">
+          <div classID="venue-rating-square">
             <div className="venue-rating">
               {venue.rating}
             </div>

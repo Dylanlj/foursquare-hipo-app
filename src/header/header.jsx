@@ -3,7 +3,7 @@ import HeaderHome   from './header-home.jsx'
 import HeaderVenues from './header-venues.jsx'
 import HeaderDisplay from './header-display.jsx'
 import '../styles/search.css'
-import '../styles/display-venue.css'
+import '../styles/header.css'
 
 class FrontPage extends Component {
 
@@ -33,5 +33,3 @@ class FrontPage extends Component {
 }
 
 export default FrontPage;
-
-

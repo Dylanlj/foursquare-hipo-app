@@ -12,6 +12,8 @@ shouldn't have the the pointer show up on the display venue photo list
 
 each time we make a api call for venue details were setting state, probably unnecessary
 
+opacity on letters is down
+
 throwing errors if the establishment has no photos
 
 

@@ -18,7 +18,6 @@ class Tips extends Component  {
   componentDidMount () {
     let tipList = []
     let divider = this.state.divider
-console.log(this.props.venueTips)
     if(this.props.venueTips.length > 1) {
       this.setState({allTipsButton: (
         <div>{this.divider}

@@ -2,6 +2,10 @@
   display: inline-block;
 }
 
+.recent-search-item {
+  cursor: pointer;
+}
+
 .starting-info {
   position: absolute;
   left: 0;
