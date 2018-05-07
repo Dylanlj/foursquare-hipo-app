@@ -43,7 +43,7 @@ class PhotoListVenues extends Component {
           <div className="venue-list-item" key={venue.id} onClick={() => {this.props.displayVenue(venue)}}>
 
             <img className="venue-list-image" key={venue.id} src={image} alt="venue"/>
-              <div className={ratingPresence}>
+              <div className={ratingPresence} style={{backgroundColor: "#" + venue.ratingColor}}>
                 <div className="venue-list-rating">
                   {venue.rating}
                 </div>

@@ -4,7 +4,7 @@ import DisplayLogo  from '../images/logo/display-logo.png'
 class HeaderDisplay extends Component  {
   render () {
 
-
+console.log(this.props.state)
     let venue = this.props.state.displayingVenue
 
     let image = "http://www.seetorontonow.com/wp-content/uploads/2018/03/toronto-flatiron-building-copyright-@nguxentravels-from-instagram.jpg"
@@ -16,35 +16,48 @@ class HeaderDisplay extends Component  {
     let venueRating = ""
     if (venue.rating) {
       venueRating = (
-        <div className="venue-rating-square">
+        <div className="venue-rating-square" style={{backgroundColor: "#" + venue.ratingColor}}>
           <div className="venue-rating">
             {venue.rating}
           </div>
         </div>)
     }
 
-console.log(this.props.state)
+
     let phoneNumber = ""
     if (venue.contact.phone) {
-      phoneNumber = (" " + venue.contact.phone)
+
+      phoneNumber = (
+        <div className="venue-info">
+          <div className="material-icons">call</div>
+          {" " + venue.contact.phone}
+        </div>
+        )
     }
 
-    let visualTierLevels = [<div className="bar tier-one" key={venue.id + "1"}/>]
+    let visualPriceTier = ""
 
-    if (venue.price.tier >=2) {
-      visualTierLevels.push(<div className="bar tier-two" key={venue.id + "2"}/>)
-    }
-    if (venue.price.tier >=3) {
-      visualTierLevels.push(<div className="bar tier-three" key={venue.id + "3"}/>)
-    }
-    if (venue.price.tier >=4) {
-      visualTierLevels.push(<div className="bar tier-four" key={venue.id + "4"}/>)
+    if (venue.price) {
+      let visualTierLevels = [<div className="bar tier-one" key={venue.id + "1"}/>]
+      if (venue.price.tier >=2) {
+        visualTierLevels.push(<div className="bar tier-two" key={venue.id + "2"}/>)
+      }
+      if (venue.price.tier >=3) {
+        visualTierLevels.push(<div className="bar tier-three" key={venue.id + "3"}/>)
+      }
+      if (venue.price.tier >=4) {
+        visualTierLevels.push(<div className="bar tier-four" key={venue.id + "4"}/>)
+      }
+      visualPriceTier = (
+        <span className="price-tier">
+          <div className="material-icons">label</div>
+          <span className="base">
+            {visualTierLevels}
+          </span>
+        </span>
+      )
     }
 
-    let visualPriceTier = (
-      <span className="base">
-        {visualTierLevels}
-      </span>)
 
     return (
       <div className="display-venue">
@@ -63,17 +76,11 @@ console.log(this.props.state)
             <div className="material-icons">place </div>
             {" " + venue.location.address}
           </div>
-          <div className="venue-info">
-            <div className="material-icons">call </div>
             {phoneNumber}
-          </div>
           <div className="venue-info">
             <div className="material-icons">person </div>
             {" " + venue.hereNow.count}
-            <span className="price-tier">
-              <div className="material-icons">label</div>
               {visualPriceTier}
-            </span>
           </div>
 
         </div>

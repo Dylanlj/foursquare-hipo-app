@@ -16,8 +16,20 @@
   height: 65px;
   object-fit: contain;
   transform: rotate(-45deg);
-  background-color: #776cee;
   z-index: 20;
+}
+
+.venue-rating {
+  position: absolute;
+  left: 17px;
+  top: 23px;
+  transform: rotate(45deg);
+  z-index: 40;
+  width: 33px;
+  height: 18px;
+  font-family: gotham-book;
+  font-size: 18px;
+  color: #ffffff;
 }
 
 .display-venue {
@@ -60,18 +72,7 @@
 
 }
 
-.venue-rating {
-  position: absolute;
-  left: 17px;
-  top: 19px;
-  transform: rotate(45deg);
-  z-index: 40;
-  width: 33px;
-  height: 18px;
-  font-family: gotham-book;
-  font-size: 18px;
-  color: #ffffff;
-}
+
 
 
 .venue-info-bar {
