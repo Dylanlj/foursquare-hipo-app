@@ -20,7 +20,6 @@ class HeaderVenues extends Component  {
           </div>
         </div>
       )
-
   }
 }
 

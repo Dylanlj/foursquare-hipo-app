@@ -23,20 +23,11 @@ class App extends Component {
     }
   }
 
-
   findVenues = (event) => {
-
     if (event) {
       event.preventDefault()
     }
     const request = require('request');
-    let searches = this.state.previousSearches
-    if (searches.length === 20) {
-      searches = searches.shift()
-    }
-    searches.push({query: this.state.searchTerms.query, place: this.state.searchTerms.place})
-    this.setState({searches: searches})
-
     request({
       url: 'https://api.foursquare.com/v2/venues/search',
       method: 'GET',
@@ -56,13 +47,22 @@ class App extends Component {
         if(!JSON.parse(body).meta.errorType) {
           let venues = JSON.parse(body).response.venues
           this.setState({status: "search-found"}, () => {this.getVenueDetails(venues)})
+          let searches = this.state.previousSearches
+          if (searches.length === 20) {
+            searches = searches.shift()
+          }
+          searches.push({query: this.state.searchTerms.query, place: this.state.searchTerms.place})
+          this.setState({searches: searches})
         }
       }
     }.bind(this));
   }
 
-  getVenueDetails = (venues) => {
+  backToSearch = () => {
+    this.setState({status: "search-found"})
+  }
 
+  getVenueDetails = (venues) => {
     const request = require('request');
     let allVenueDetails = []
     for (let venue of venues) {
@@ -79,37 +79,31 @@ class App extends Component {
           console.error(err);
         } else {
           allVenueDetails.push(JSON.parse(body).response.venue)
-        this.setState({status: "search-found", venues: allVenueDetails})
+          this.setState({status: "search-found", venues: allVenueDetails})
         }
       }.bind(this));
     }
   }
 
+//I was trying to see if a photo request would give more photos, but still only getting two photos per venue
   displayVenue = (venue) => {
-
     const request = require('request');
-
-      request({
-        url: `https://api.foursquare.com/v2/venues/${venue.id}/photos`,
-        method: 'GET',
-        qs: {
-          client_id: process.env.REACT_APP_CLIENT_ID,
-          client_secret: process.env.REACT_APP_CLIENT_SECRET,
-          v: '20180323',
-        }
-      }, function(err, res, body) {
-        if (err) {
-          console.error(err);
-        } else {
-          console.log(JSON.parse(body).response)
-         this.setState({status: "display-venue", displayingVenue: venue})
-        }
-      }.bind(this));
-
-
+    request({
+      url: `https://api.foursquare.com/v2/venues/${venue.id}/photos`,
+      method: 'GET',
+      qs: {
+        client_id: process.env.REACT_APP_CLIENT_ID,
+        client_secret: process.env.REACT_APP_CLIENT_SECRET,
+        v: '20180323',
+      }
+    }, function(err, res, body) {
+      if (err) {
+        console.error(err);
+      } else {
+       this.setState({status: "display-venue", displayingVenue: venue})
+      }
+    }.bind(this));
   }
-
-
 
   handleVenueChange = (event) => {
     this.setState({searchTerms:
@@ -127,7 +121,6 @@ class App extends Component {
   }
 
   render() {
-
     return (
       <div className="App">
         <Header
@@ -136,14 +129,15 @@ class App extends Component {
         handleVenueChange={this.handleVenueChange}
         state={this.state}
         />
-
         <Body
         state={this.state}
         displayVenue={this.displayVenue}
         reSearching={this.reSearching}
         />
-
-        <AboutUs status={this.state.status}/>
+        <AboutUs
+          status={this.state.status}
+          backToSearch={this.backToSearch}
+        />
       </div>
     );
   }

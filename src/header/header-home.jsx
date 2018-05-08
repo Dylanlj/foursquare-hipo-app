@@ -22,10 +22,7 @@ class HeaderHome extends Component  {
             />
           </div>
         </div>
-
-
       )
-
   }
 }
 

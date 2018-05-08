@@ -22,7 +22,7 @@ class PhotoList extends Component  {
         <PhotoListDisplay
           state={this.props.state}
         />
-        )
+      )
     } else {
       return (
         <div></div>

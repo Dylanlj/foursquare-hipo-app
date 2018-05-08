@@ -1,6 +1,24 @@
 .search {
   display: inline-block; }
 
+.search-found .background {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; }
+
+.search-found .logo {
+  position: absolute;
+  width: 252px;
+  height: 124px;
+  top: 0px;
+  left: 10%; }
+
+.search-found .search {
+  display: inline-block;
+  position: absolute;
+  margin-top: 30px;
+  left: 38%; }
+
 .recent-search-item {
   cursor: pointer; }
 
@@ -21,24 +39,6 @@
   width: 454px;
   height: 228px;
   object-fit: contain; }
-
-.search-found .background {
-  width: 100%;
-  height: 150px;
-  object-fit: cover; }
-
-.search-found .logo {
-  position: absolute;
-  width: 252px;
-  height: 124px;
-  top: 0px;
-  left: 10%; }
-
-.search-found .search {
-  display: inline-block;
-  position: absolute;
-  margin-top: 30px;
-  left: 38%; }
 
 .food-search {
   width: 285px;

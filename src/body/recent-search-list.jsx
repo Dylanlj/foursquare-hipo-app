@@ -16,11 +16,11 @@ class RecentSearches extends Component {
       searches.push(
         <div key={i}>
           <div key={i} className="recent-search-item" onClick={() => {this.props.reSearching(unformattedSearches[i])}}>
-          {unformattedSearches[i].query} in {unformattedSearches[i].place}
+            {unformattedSearches[i].query} in {unformattedSearches[i].place}
           </div>
           {divider}
         </div>
-        )
+      )
      }
 
     return (
@@ -32,7 +32,6 @@ class RecentSearches extends Component {
     )
   }
 }
-
 
 export default RecentSearches;
 

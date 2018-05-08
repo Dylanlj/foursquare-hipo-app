@@ -7,13 +7,12 @@ class PhotoListDisplay extends Component {
     let list = [];
     if (this.props.state.displayingVenue.photos.groups[0]) {
       let venuePhotos = this.props.state.displayingVenue.photos.groups[0].items
-
       for (let venuePhoto of venuePhotos) {
         let image = `${venuePhoto.prefix}300x300${venuePhoto.suffix}`
         let userImage = "";
         if (venuePhoto.user) {
           userImage =
-          <div className="photo-by-user">
+          <div className="photo-of-user-container">
             <div className="user-photo-square">
               <img className="user-photo" src={`${venuePhoto.user.photo.prefix}300x300${venuePhoto.user.photo.suffix}`} alt="user"/>
             </div>
@@ -25,24 +24,22 @@ class PhotoListDisplay extends Component {
         }
 
         list.push(
-          <div className="venue-list-item" key={venuePhoto.id} >
-            <img className="venue-list-image" key={venuePhoto.id} src={image} alt="venue"/>
+          <div className="photo-grid-item" key={venuePhoto.id} >
+            <img className="photo-grid-image" key={venuePhoto.id} src={image} alt="venue"/>
             {userImage}
           </div>
         )
       }
     }
 
-
     return (
-      <div>
-        <div className="venue-list">
+      <div className="display-venue">
+        <div className="photo-grid">
           {list}
         </div>
         <Tips venueTips={this.props.state.displayingVenue.tips.groups}/>
       </div>
-
-      )
+    )
   }
 }
 

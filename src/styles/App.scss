@@ -18,16 +18,11 @@
   width: 100%;
 }
 
-.item-container-list {
-  position: absolute;
-  top: 173px;
-  right: 13%;
-  width: 290px;
-  background-color: #ffffff;
-  box-shadow: 0 0 34px 0 rgba(255, 95, 95, 0.32);
-  padding-top: 20px;
-  padding-bottom: 30px;
+.back-to-search {
+  cursor: pointer;
+  color: #1a2899;
 }
+
 
 .about {
   margin: 10px;
@@ -46,50 +41,52 @@
   background-color: #e3e3e3;
 }
 
+
 .price-tier {
-  margin-left:  20px
+  margin-left:  20px;
+
+  .base {
+    position: absolute;
+    top: 6px;
+    margin-left: 4px;
+    width: 60px;
+    height: 3px;
+    background: #000000;
+    overflow: hidden;
+  }
+
+  .tier-one {
+    z-index: 10;
+    background: #c9c5ff;
+    width: 15px;
+  }
+
+  .tier-two {
+    background: #a59fee;
+    z-index: 7;
+    width: 30px;
+  }
+
+  .tier-three {
+    background: #8b81ff;
+    z-index: 6;
+    width: 45px;
+  }
+
+  .tier-three {
+    background-color: #685dea;
+    z-index: 5;
+    width: 70px;
+  }
+
+  .bar {
+    position: absolute;
+    left: 0px;
+    height: 15px;
+  }
+
+  .material-icons {
+    transform: rotate(-45deg);
+  }
 }
 
-.price-tier .base {
-  position: absolute;
-  top: 6px;
-  margin-left: 4px;
-  width: 60px;
-  height: 3px;
-  background: #000000;
-  overflow: hidden;
-}
-
-.price-tier .tier-one {
-  z-index: 10;
-  background: #c9c5ff;
-  width: 15px;
-}
-
-.price-tier .tier-two {
-  background: #a59fee;
-  z-index: 7;
-  width: 30px;
-}
-
-.price-tier .tier-three {
-  background: #8b81ff;
-  z-index: 6;
-  width: 45px;
-}
-
-.price-tier .tier-three {
-  background-color: #685dea;
-  z-index: 5;
-  width: 70px;
-}
-
-.price-tier .bar {
-  position: absolute;
-  left: 0px;
-  height: 15px;
-}
-
-.price-tier .material-icons {
-  transform: rotate(-45deg);
-}

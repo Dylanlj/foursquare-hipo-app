@@ -3,6 +3,7 @@ import HeaderHome   from './header-home.jsx'
 import HeaderVenues from './header-venues.jsx'
 import HeaderDisplay from './header-display.jsx'
 import '../css-styles/search.css'
+import '../css-styles/header-display.css'
 import '../css-styles/header.css'
 
 class FrontPage extends Component {
@@ -14,7 +15,7 @@ class FrontPage extends Component {
           findVenues={this.props.findVenues}
           handleQueryChange={this.props.handleQueryChange}
           handleVenueChange={this.props.handleVenueChange}
-          />
+        />
       )
     } else if (this.props.state.status === "search-found") {
       return (
@@ -25,9 +26,7 @@ class FrontPage extends Component {
         />
       )
     } else {
-      return (
-      <HeaderDisplay state={this.props.state}/>
-      )
+      return (<HeaderDisplay state={this.props.state}/>)
     }
   }
 }

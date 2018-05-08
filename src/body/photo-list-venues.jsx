@@ -25,11 +25,11 @@ class PhotoListVenues extends Component {
           visualTierLevels = ""
         }
 
-
         let visualPriceTier = (
           <span className="base" >
             {visualTierLevels}
-          </span>)
+          </span>
+        )
 
         if (venue.rating) {
           ratingPresence = "venue-list-rating-square"
@@ -40,9 +40,8 @@ class PhotoListVenues extends Component {
           image = "http://www.seetorontonow.com/wp-content/uploads/2018/03/toronto-flatiron-building-copyright-@nguxentravels-from-instagram.jpg"
         }
         list.push(
-          <div className="venue-list-item" key={venue.id} onClick={() => {this.props.displayVenue(venue)}}>
-
-            <img className="venue-list-image" key={venue.id} src={image} alt="venue"/>
+          <div className="photo-grid-item" key={venue.id} onClick={() => {this.props.displayVenue(venue)}}>
+            <img className="photo-grid-image" key={venue.id} src={image} alt="venue"/>
               <div className={ratingPresence} style={{backgroundColor: "#" + venue.ratingColor}}>
                 <div className="venue-list-rating">
                   {venue.rating}
@@ -51,7 +50,6 @@ class PhotoListVenues extends Component {
             <div className="venue-name">{venue.name}</div>
             <div className="people-count">
               <div className="divider"></div>
-
               <div className="material-icons">person</div>
               {" " + venue.hereNow.count}
               <span className="price-tier">
@@ -62,22 +60,17 @@ class PhotoListVenues extends Component {
           </div>
         )
       }
-
-
     return (
-        <div>
+        <div className="show-venues">
           <RecentSearches
             searches={this.props.state.previousSearches}
             reSearching={this.props.reSearching}
-            />
-          <div className="venue-list venue">
-              {list}
+          />
+          <div className="photo-grid">
+            {list}
           </div>
         </div>
-
-
       )
-
   }
 }
 

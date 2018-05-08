@@ -1,147 +1,101 @@
-@font-face {
-  font-family: gotham-light;
-  src: url("../fonts/gotham/Gotham-Light.otf") format("opentype");
-}
-@font-face {
-  font-family: gotham-medium;
-  src: url("../fonts/gotham/Gotham-Medium.otf") format("opentype");
-}
-
-
-.venue-rating-square {
+.starting-info {
   position: absolute;
-  top: 453px;
-  right: 15%;
-  width: 65px;
-  height: 65px;
-  object-fit: contain;
-  transform: rotate(-45deg);
-  z-index: 20;
+  left: 0;
+  right: 0;
+  top: 0%;
 }
 
-.venue-rating {
-  position: absolute;
-  left: 17px;
-  top: 23px;
-  transform: rotate(45deg);
-  z-index: 40;
-  width: 33px;
-  height: 18px;
-  font-family: gotham-book;
-  font-size: 18px;
-  color: #ffffff;
-}
-
-.display-venue {
-  height: 600px;
-  width: 100%;
-}
-
-
-.display-venue-logo {
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  width: 420px;
+.logo {
+  top: 100%;
+  width: 454px;
   height: 228px;
   object-fit: contain;
 }
 
-.category-icon {
-  position: absolute;
-  height: 90px;
-  width: 90px;
-  left: 35px;
-  top: 35px;
-  transform: rotate(45deg);
-  filter: opacity(.5) drop-shadow(0 0 0 #ff7070);
-}
-
-
-
-.category-icon-square {
-  background: url(/images/classy_fabric.png);
-  position: absolute;
-  left: 49%;
-  top: 119px;
-  width: 160px;
-  height: 160px;
-  object-fit: contain;
-  transform: rotate(-45deg);
-  border: 4px solid #ffc5c5;
-
-}
-
-
-
-
-.venue-info-bar {
-  position: absolute;
-  top: 486px;
+.background {
   width: 100%;
-  text-align: left;
-  height: 115px;
-  object-fit: contain;
-
-
+  height: 600px;
+  object-fit: cover;
+  z-index: 0;
 }
 
-.background-gradient {
-  position: absolute;
-  height: 115px;
-  width: 100%;
-  opacity: 0.8;
-  background-image: linear-gradient(95deg, #1e0db4, #e44747);
+.search-form {
+  display: inline-block;
+
+  .food-search {
+    width: 285px;
+    height: 45px;
+    object-fit: contain;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24);
+    padding-left: 10px;
+    margin: 10px;
+  }
+  .place-search {
+    width: 156px;
+    height: 45px;
+    object-fit: contain;
+    font-size: 14px;
+    border-radius: 4px;
+    padding-left: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24);
+  }
+  .search-button {
+    position: relative;
+    top: 6px;
+    width: 77px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #ff5f5f;
+    box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24);
+    border: 0px;
+    margin: 10px;
+    color:#ffffff;;
+  }
 }
 
-.venue-title {
-  position: absolute;
-  bottom: 20px;
-  left: 13%;
-  width: 432px;
-  font-family: gotham-light;
-  font-size: 64px;
-  font-weight: 300;
-  color: #ffffff;
-  margin-bottom: 100px;
+.search-found {
+  .background {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  .logo {
+    position: absolute;
+    width: 252px;
+    height: 124px;
+    top: 0px;
+    left: 10%;
+  }
+  .search-form {
+    display: inline-block;
+    position: absolute;
+    margin-top: 30px;
+    left: 38%;
+  }
+  .recent-search-item {
+    cursor: pointer;
+  }
 }
 
-.venue-image {
-  left: 0px;
-  filter: grayscale(90%);
+.home {
+ .title {
+    font-family: gotham-extra-light;
+    font-size: 55px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+  .description {
+    width: 543px;
+    font-family: gotham-extra-light;
+    margin: auto;
+    color: #ffffff;
+  }
 }
-
-.venue-info {
-  position: relative;
-  top: 10px;
-  text-align: left;
-  font-family: gotham-medium;
-  font-size: 12px;
-  font-weight: 500;
-  color: #ffffff;
-  margin: 14px;
-  margin-left:  13%;
-}
-
-.venue-info-bar .material-icons {
-  font-size: 12px;
-}
-
-.venue-info-bar .material-icons {
-  font-size: 12px;
-}
-
-.people-count .material-icons {
-  font-size: 14px;
-}
-
-
-.display-venue .price-tier {
-  position: absolute;
-}
-
-.display-venue .price-tier .material-icons {
-  margin-top: 2px;
-}
-
 

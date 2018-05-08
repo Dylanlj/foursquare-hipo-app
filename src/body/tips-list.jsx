@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css-styles/tips.css'
+import '../css-styles/search-tips-lists.css'
 
 
 class Tips extends Component  {
@@ -12,7 +12,6 @@ class Tips extends Component  {
       unformattedTips: this.props.venueTips[0].items,
       formattedTips: []
     }
-
   }
 
   componentDidMount () {
@@ -47,9 +46,7 @@ class Tips extends Component  {
       )
     }
     this.setState({formattedTips: tipList})
-
   }
-
 
   AllTips = () => {
     let combineTips = []

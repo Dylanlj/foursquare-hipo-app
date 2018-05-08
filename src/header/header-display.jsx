@@ -3,12 +3,8 @@ import DisplayLogo  from '../images/logo/display-logo.png'
 
 class HeaderDisplay extends Component  {
   render () {
-
-console.log(this.props.state)
     let venue = this.props.state.displayingVenue
-
     let image = "http://www.seetorontonow.com/wp-content/uploads/2018/03/toronto-flatiron-building-copyright-@nguxentravels-from-instagram.jpg"
-
     if (venue.bestPhoto) {
       image = `${venue.bestPhoto.prefix}500x235${venue.bestPhoto.suffix}`
     }
@@ -20,19 +16,18 @@ console.log(this.props.state)
           <div className="venue-rating">
             {venue.rating}
           </div>
-        </div>)
+        </div>
+      )
     }
-
 
     let phoneNumber = ""
     if (venue.contact.phone) {
-
       phoneNumber = (
         <div className="venue-info">
           <div className="material-icons">call</div>
           {" " + venue.contact.phone}
         </div>
-        )
+      )
     }
 
     let visualPriceTier = ""
@@ -58,7 +53,6 @@ console.log(this.props.state)
       )
     }
 
-
     return (
       <div className="display-venue">
         <img src={image} alt="venue background" className="background venue-image"/>
@@ -82,12 +76,9 @@ console.log(this.props.state)
             {" " + venue.hereNow.count}
               {visualPriceTier}
           </div>
-
         </div>
       </div>
-
     )
-
   }
 }
 
