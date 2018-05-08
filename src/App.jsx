@@ -143,7 +143,7 @@ class App extends Component {
         reSearching={this.reSearching}
         />
 
-        <AboutUs/>
+        <AboutUs status={this.state.status}/>
       </div>
     );
   }

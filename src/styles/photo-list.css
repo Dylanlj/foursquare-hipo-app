@@ -17,7 +17,6 @@
   overflow: hidden;
   display: flex;
   object-fit: contain;
-
   background-color: #12195f;
 }
 
@@ -35,6 +34,7 @@
   width: 290px;
   opacity: 1;
 }
+
 
 .venue .venue-list-image {
   opacity: 0.5;
@@ -60,6 +60,8 @@
   left: 0px;
   right: 0px;
 }
+
+
 
 .photo-by-user .user-name {
   font-family: gotham-medium;
