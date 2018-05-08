@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import HeaderHome   from './header-home.jsx'
 import HeaderVenues from './header-venues.jsx'
 import HeaderDisplay from './header-display.jsx'
-import '../styles/search.css'
-import '../styles/header.css'
+import '../css-styles/search.css'
+import '../css-styles/header.css'
 
 class FrontPage extends Component {
 

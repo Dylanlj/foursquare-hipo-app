@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PhotoListVenues from './photo-list-venues.jsx'
 import PhotoListDisplay from './photo-list-display.jsx'
-import '../styles/photo-list.css'
-import '../styles/search-tips-lists.css'
+import '../css-styles/photo-list.css'
+import '../css-styles/search-tips-lists.css'
 
 
 class PhotoList extends Component  {

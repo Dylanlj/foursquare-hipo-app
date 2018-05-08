@@ -1,0 +1,88 @@
+.search {
+  display: inline-block; }
+
+.recent-search-item {
+  cursor: pointer; }
+
+.starting-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0%; }
+
+.background {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  z-index: 0; }
+
+.logo {
+  top: 100%;
+  width: 454px;
+  height: 228px;
+  object-fit: contain; }
+
+.search-found .background {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; }
+
+.search-found .logo {
+  position: absolute;
+  width: 252px;
+  height: 124px;
+  top: 0px;
+  left: 10%; }
+
+.search-found .search {
+  display: inline-block;
+  position: absolute;
+  margin-top: 30px;
+  left: 38%; }
+
+.food-search {
+  width: 285px;
+  height: 45px;
+  object-fit: contain;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24);
+  padding-left: 10px;
+  margin: 10px; }
+
+.place-search {
+  width: 156px;
+  height: 45px;
+  object-fit: contain;
+  font-size: 14px;
+  border-radius: 4px;
+  padding-left: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24); }
+
+.search-button {
+  position: relative;
+  top: 6px;
+  width: 77px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: #ff5f5f;
+  box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24);
+  border: 0px;
+  margin: 10px;
+  color: #ffffff; }
+
+.title {
+  font-family: gotham-extra-light;
+  font-size: 55px;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ffffff; }
+
+.description {
+  width: 543px;
+  font-family: gotham-extra-light;
+  margin: auto;
+  color: #ffffff; }

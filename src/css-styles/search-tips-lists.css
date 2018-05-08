@@ -1,0 +1,13 @@
+.item-list-divider {
+  border-bottom: solid 1px #e4e4e4;
+  width: 260px;
+  height: 1px;
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-top: 8px; }
+
+.item-list-title-divider {
+  width: 70px;
+  border-bottom: solid 2px #c4c0ff;
+  display: inline-block;
+  margin-bottom: 10px; }

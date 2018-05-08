@@ -20,6 +20,15 @@
   background-color: #12195f;
 }
 
+.venue-list-item:hover {
+  .venue-list-image {
+    opacity: 0.5;
+  }
+  .photo-by-user {
+    opacity: 1;
+  }
+}
+
 .venue-list-item .divider {
   position: absolute;
   width: 48px;
@@ -59,6 +68,7 @@
   margin-right: auto;
   left: 0px;
   right: 0px;
+  opacity: 0;
 }
 
 

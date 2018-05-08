@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/tips.css'
+import '../css-styles/tips.css'
 
 
 class Tips extends Component  {
