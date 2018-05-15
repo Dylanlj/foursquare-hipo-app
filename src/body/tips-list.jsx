@@ -27,9 +27,7 @@ class Tips extends Component  {
   }
 
 
-
   formatTips = () => {
-    console.log(this.state)
     let tipList = []
     let divider = this.state.divider
 
@@ -39,17 +37,18 @@ class Tips extends Component  {
         divider = "";
       }
       let image = `${this.state.unformattedTips[i].user.photo.prefix}100x100${this.state.unformattedTips[i].user.photo.suffix}`
-      console.log(image)
       tipList.push(
         <div key={i}>
-            <img className="user-image" src={image} alt="user"/>
-            <div className="tip-text user-name">
-              {this.state.unformattedTips[i].user.firstName}
-              {this.state.unformattedTips[i].user.lastName}
-            </div>
-            <div className="tip-text">
-              {this.state.unformattedTips[i].text}
-            </div>
+          <div className="user-photo-square">
+            <img className="user-photo" src={image} alt="user"/>
+          </div>
+          <div className="tip-text user-name">
+            {this.state.unformattedTips[i].user.firstName}
+            {this.state.unformattedTips[i].user.lastName}
+          </div>
+          <div className="tip-text">
+            {this.state.unformattedTips[i].text}
+          </div>
           {divider}
         </div>
       )

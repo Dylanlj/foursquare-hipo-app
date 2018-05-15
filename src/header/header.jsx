@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import HeaderHome   from './header-home.jsx'
-import HeaderVenues from './header-venues.jsx'
 import HeaderDisplay from './header-display.jsx'
-// import '../css-styles/search.css'
 import '../css-styles/header-display.css'
 import '../css-styles/header.css'
 

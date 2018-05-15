@@ -40,13 +40,11 @@
 }
 
 
-.user-image {
+.tips-container .user-photo-square {
   position: absolute;
   left: 25px;
-  width: 40px;
-  height: 40px;
+
   object-fit: contain;
-  transform: rotate(-45deg);
 }
 
 .user-name.tip-text {
