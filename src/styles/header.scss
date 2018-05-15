@@ -79,15 +79,12 @@
 @keyframes searchForm {
   0% {
     bottom: 110px;
-
-    margin-left: auto;
+    margin-left: initial
 
   }
   100% {
     bottom: 42px;
-
     margin-left: 30%;
-
   }
 }
 
