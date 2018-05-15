@@ -8,7 +8,9 @@
   top: 100%;
   width: 454px;
   height: 228px;
-  object-fit: contain; }
+  object-fit: contain;
+  animation-name: testLogo;
+  animation-duration: 2s; }
 
 .background {
   width: 100%;
@@ -50,9 +52,14 @@
     color: #ffffff; }
 
 @keyframes logoLeft {
-  0% { }
+  0% {
+    margin-left: auto;
+    width: 454px;
+    height: 228px; }
   100% {
-    left: 10%; } }
+    margin-left: 10%;
+    width: 252px;
+    height: 124px; } }
 
 @keyframes bckgUp {
   0% {
@@ -86,7 +93,10 @@
   width: 252px;
   height: 124px;
   top: 0px;
-  left: 10%;
+  right: 0%;
+  left: 0%;
+  margin-left: auto;
+  margin-right: auto;
   animation-name: logoLeft;
   animation-duration: 2s; }
 

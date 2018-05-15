@@ -26,6 +26,8 @@ class Tips extends Component  {
     }
   }
 
+
+
   formatTips = () => {
     console.log(this.state)
     let tipList = []
