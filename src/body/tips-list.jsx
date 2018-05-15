@@ -20,11 +20,10 @@ class Tips extends Component  {
 
   componentDidMount () {
     if (this.state.unformattedTips.length < 6) {
-      this.setState({howManyTips: this.state.unformattedTips.length}, this.formatTips)
+      this.setState({howManyTips: this.state.unformattedTips.length, allTipsButton: ""}, this.formatTips)
     } else {
       this.formatTips()
     }
-
   }
 
   formatTips = () => {

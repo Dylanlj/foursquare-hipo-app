@@ -50,32 +50,57 @@
     color: #ffffff; }
 
 @keyframes logoLeft {
-  0% {
-    left: 1%; }
+  0% { }
   100% {
     left: 10%; } }
 
+@keyframes bckgUp {
+  0% {
+    height: 600px; }
+  100% {
+    height: 150px; } }
+
+@keyframes searchForm {
+  0% {
+    bottom: 110px;
+    margin-left: auto; }
+  100% {
+    bottom: 42px;
+    margin-left: 30%; } }
+
+.search-found .starting-info {
+  bottom: 0%;
+  height: 150px;
+  animation-name: bckgUp;
+  animation-duration: 2s; }
+
 .search-found .background {
   width: 100%;
+  object-fit: cover;
   height: 150px;
-  object-fit: cover; }
+  animation-name: bckgUp;
+  animation-duration: 2s; }
 
 .search-found .logo {
   position: absolute;
   width: 252px;
   height: 124px;
   top: 0px;
+  left: 10%;
   animation-name: logoLeft;
   animation-duration: 2s; }
 
 .search-found .search-form {
   display: inline-block;
   position: absolute;
+  right: 0%;
+  left: 0%;
+  margin-left: 30%;
+  margin-right: auto;
   margin-top: 30px;
-  left: 38%; }
-
-.search-found .recent-search-item {
-  cursor: pointer; }
+  bottom: 42px;
+  animation-name: searchForm;
+  animation-duration: 2s; }
 
 .home .title {
   font-family: gotham-extra-light;

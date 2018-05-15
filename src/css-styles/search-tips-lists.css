@@ -4,13 +4,15 @@
 
 .item-container-list {
   position: absolute;
-  top: 173px;
-  right: 13%;
   width: 290px;
   background-color: #ffffff;
   box-shadow: 0 0 34px 0 rgba(255, 95, 95, 0.32);
   padding-top: 20px;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  right: 13%; }
+
+.recent-search-item {
+  cursor: pointer; }
 
 .tips-container {
   top: 550px;
