@@ -16,6 +16,15 @@
   object-fit: cover;
   z-index: 0; }
 
+.error-message {
+  position: relative;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  font-family: gotham-extra-light;
+  color: #ffffff;
+  font-size: 20px; }
+
 .search-form {
   display: inline-block; }
   .search-form .food-search {
@@ -72,6 +81,10 @@
     right: 60%;
     width: 252px;
     height: 124px; } }
+
+.search-found .error-message {
+  bottom: 40px;
+  left: 10%; }
 
 .search-found .starting-info {
   bottom: 0%;

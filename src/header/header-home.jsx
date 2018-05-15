@@ -23,19 +23,20 @@ class HeaderHome extends Component  {
     }
 
     return (
-       <div className={classState}>
-          <img  src={Background} alt="background"
-                className="background" />
-          <div className="starting-info">
-            {startInfo}
-            <Search
-            findVenues={this.props.findVenues}
-            handleQueryChange={this.props.handleQueryChange}
-            handleVenueChange={this.props.handleVenueChange}
-            />
-          </div>
+      <div className={classState}>
+        <img  src={Background} alt="background"
+              className="background" />
+        <div className="starting-info">
+          {startInfo}
+          <Search
+          findVenues={this.props.findVenues}
+          handleQueryChange={this.props.handleQueryChange}
+          handleVenueChange={this.props.handleVenueChange}
+          />
         </div>
-      )
+        <div className="error-message"> {this.props.state.error} </div>
+      </div>
+    )
   }
 }
 

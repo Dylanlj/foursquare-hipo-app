@@ -16,6 +16,7 @@ class App extends Component {
       venues: [],
       previousSearches: [],
       displayingVenue: "",
+      error: "",
       searchTerms: {
         query: "",
         place: ""
@@ -52,7 +53,9 @@ class App extends Component {
             searches = searches.shift()
           }
           searches.push({query: this.state.searchTerms.query, place: this.state.searchTerms.place})
-          this.setState({searches: searches})
+          this.setState({searches: searches, error: ""})
+        } else {
+          this.setState({error: `Couldn't find ${this.state.searchTerms.query} near ${this.state.searchTerms.place}`})
         }
       }
     }.bind(this));
