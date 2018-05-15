@@ -5,15 +5,11 @@
   top: 0%;
 }
 
-
-
 .logo {
   top: 100%;
   width: 454px;
   height: 228px;
   object-fit: contain;
-  animation-name: testLogo;
-  animation-duration: 2s;
 }
 
 .background {
@@ -61,18 +57,6 @@
   }
 }
 
-@keyframes logoLeft {
-  0% {
-    margin-left:  auto;
-    width: 454px;
-    height: 228px;
-  }
-  100% {
-    margin-left: 10%;
-    width: 252px;
-    height: 124px;
-  }
-}
 
 @keyframes bckgUp {
   0% {
@@ -94,33 +78,42 @@
     margin-left: 30%;
   }
 }
-
+@keyframes logoLeft {
+  0% {
+    right: 0;
+    width: 454px;
+    height: 228px;
+  }
+  100% {
+    right: 60%;
+    width: 252px;
+    height: 124px;
+  }
+}
 
 .search-found {
   .starting-info {
     bottom: 0%;
     height: 150px;
-    animation-name: bckgUp;
-    animation-duration: 2s;
+    animation: bckgUp 1s;
   }
   .background {
     width: 100%;
     object-fit: cover;
     height: 150px;
-    animation-name: bckgUp;
-    animation-duration: 2s;
+    animation: bckgUp 1s;
   }
+
   .logo {
     position: absolute;
     width: 252px;
     height: 124px;
     top: 0px;
-    right: 0%;
-    left: 0%;
+    left: 0;
+    right: 60%;
     margin-left: auto;
     margin-right: auto;
-    animation-name: logoLeft;
-    animation-duration: 2s;
+    animation: logoLeft 1s;
   }
   .search-form {
     display: inline-block;
@@ -131,8 +124,7 @@
     margin-right: auto;
     margin-top: 30px;
     bottom: 42px;
-    animation-name: searchForm;
-    animation-duration: 2s;
+    animation: searchForm 1s;
   }
 
 }
