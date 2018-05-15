@@ -87,22 +87,7 @@ class App extends Component {
 
 //I was trying to see if a photo request would give more photos, but still only getting two photos per venue
   displayVenue = (venue) => {
-    const request = require('request');
-    request({
-      url: `https://api.foursquare.com/v2/venues/${venue.id}/photos`,
-      method: 'GET',
-      qs: {
-        client_id: process.env.REACT_APP_CLIENT_ID,
-        client_secret: process.env.REACT_APP_CLIENT_SECRET,
-        v: '20180323',
-      }
-    }, function(err, res, body) {
-      if (err) {
-        console.error(err);
-      } else {
        this.setState({status: "display-venue", displayingVenue: venue})
-      }
-    }.bind(this));
   }
 
   handleVenueChange = (event) => {

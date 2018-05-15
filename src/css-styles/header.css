@@ -49,6 +49,12 @@
     margin: 10px;
     color: #ffffff; }
 
+@keyframes logoLeft {
+  0% {
+    left: 1%; }
+  100% {
+    left: 10%; } }
+
 .search-found .background {
   width: 100%;
   height: 150px;
@@ -59,7 +65,8 @@
   width: 252px;
   height: 124px;
   top: 0px;
-  left: 10%; }
+  animation-name: logoLeft;
+  animation-duration: 2s; }
 
 .search-found .search-form {
   display: inline-block;

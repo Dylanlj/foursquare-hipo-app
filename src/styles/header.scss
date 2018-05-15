@@ -5,6 +5,7 @@
   top: 0%;
 }
 
+
 .logo {
   top: 100%;
   width: 454px;
@@ -57,6 +58,15 @@
   }
 }
 
+@keyframes logoLeft {
+  0% {
+  left:1%;
+  }
+  100% {
+    left: 10%;
+  }
+}
+
 .search-found {
   .background {
     width: 100%;
@@ -68,7 +78,9 @@
     width: 252px;
     height: 124px;
     top: 0px;
-    left: 10%;
+    // left: 10%;
+    animation-name: logoLeft;
+    animation-duration: 2s;
   }
   .search-form {
     display: inline-block;

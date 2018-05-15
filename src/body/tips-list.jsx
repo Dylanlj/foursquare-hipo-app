@@ -8,23 +8,31 @@ class Tips extends Component  {
     super(props);
     this.state = {
       divider: (<div className="item-list-divider"/>),
-      allTipsButton: "",
+      allTipsButton: (
+        <div>{this.divider}
+          <div onClick={this.AllTips} className="all-tips-button" >All Tips</div>
+        </div>),
       unformattedTips: this.props.venueTips[0].items,
-      formattedTips: []
+      formattedTips: [],
+      howManyTips: 6
     }
   }
 
   componentDidMount () {
-    let tipList = []
-    let divider = this.state.divider
-    if(this.props.venueTips.length > 1) {
-      this.setState({allTipsButton: (
-        <div>{this.divider}
-          <div onClick={this.AllTips} className="all-tips-button" >All Tips</div>
-        </div>)})
+    if (this.state.unformattedTips.length < 6) {
+      this.setState({howManyTips: this.state.unformattedTips.length}, this.formatTips)
+    } else {
+      this.formatTips()
     }
 
-    for (let i = 0; i < this.state.unformattedTips.length; i++) {
+  }
+
+  formatTips = () => {
+    console.log(this.state)
+    let tipList = []
+    let divider = this.state.divider
+
+    for (let i = 0; i < this.state.howManyTips; i++) {
 
       if(i === this.state.unformattedTips.length - 1) {
         divider = "";
@@ -49,11 +57,9 @@ class Tips extends Component  {
   }
 
   AllTips = () => {
-    let combineTips = []
-    for (let tipGroup of this.props.venueTips) {
-      combineTips = combineTips.concat(tipGroup.items)
-    }
-    this.setState({unformattedTips: combineTips})
+    this.setState({howManyTips: this.state.unformattedTips.length, allTipsButton: ""},
+      this.formatTips
+    )
   }
 
   render () {
