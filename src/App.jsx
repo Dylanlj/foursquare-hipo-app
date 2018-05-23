@@ -52,7 +52,9 @@ class App extends Component {
           if (searches.length === 20) {
             searches = searches.shift()
           }
-          searches.push({query: this.state.searchTerms.query, place: this.state.searchTerms.place})
+          if(event) {
+            searches.push({query: this.state.searchTerms.query, place: this.state.searchTerms.place})
+          }
           this.setState({searches: searches, error: ""})
         } else {
           this.setState({error: `Couldn't find ${this.state.searchTerms.query} near ${this.state.searchTerms.place}`})

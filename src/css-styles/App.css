@@ -66,3 +66,7 @@
     height: 15px; }
   .price-tier .material-icons {
     transform: rotate(-45deg); }
+
+@media screen and (max-width: 600px) {
+  .about {
+    width: 90%; } }

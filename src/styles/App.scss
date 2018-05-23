@@ -12,11 +12,13 @@
   src: url("../fonts/gotham/Gotham-Medium.otf") format("opentype");
 }
 
+
 .App {
   text-align: center;
   z-index: 4;
   width: 100%;
 }
+
 
 .back-to-search {
   cursor: pointer;
@@ -87,6 +89,12 @@
 
   .material-icons {
     transform: rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    width: 90%;
   }
 }
 

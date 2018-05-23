@@ -119,7 +119,22 @@
   bottom: 42px;
   animation: searchForm 1s; }
 
-.home .title {
+@keyframes noAnimation {}@media screen and (max-width: 600px) {
+  .search-found .error-message {
+    animation: noAnimation; }
+  .search-found .starting-info {
+    animation: noAnimation; }
+  .search-found .background {
+    animation: noAnimation; }
+  .search-found .logo {
+    animation: noAnimation; }
+  .search-found .search-form {
+    margin-left: auto;
+    top: 160px;
+    bottom: 2px;
+    animation: noAnimation; } }
+
+.title {
   font-family: gotham-extra-light;
   font-size: 55px;
   font-weight: 200;
@@ -127,8 +142,38 @@
   margin-bottom: 10px;
   color: #ffffff; }
 
-.home .description {
+.description {
   width: 543px;
   font-family: gotham-extra-light;
   margin: auto;
   color: #ffffff; }
+
+@media screen and (max-width: 600px) {
+  .description {
+    width: 290px;
+    margin-bottom: 10px; }
+  .logo {
+    width: 320px;
+    height: 160px; }
+  .title {
+    margin-top: 10px; }
+  .search-found .logo {
+    position: absolute;
+    width: 252px;
+    height: 124px;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; }
+  .search-found .background {
+    width: 100%;
+    object-fit: cover;
+    height: 350px; }
+  .search-found .search-form {
+    position: absolute;
+    right: 0%;
+    left: 0%;
+    margin-right: auto;
+    margin-top: auto;
+    bottom: 20px; } }

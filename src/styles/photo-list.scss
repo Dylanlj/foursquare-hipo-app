@@ -144,7 +144,18 @@
 
 }
 
-
+@media screen and (max-width: 600px) {
+  .photo-grid {
+    position: relative;
+    left: 0%;
+    right: 0%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    grid-template-columns: 1fr;
+    width: 290px;
+  }
+}
 
 
 
