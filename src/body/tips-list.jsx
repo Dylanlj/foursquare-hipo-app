@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../css-styles/search-tips-lists.css'
 
 
 class Tips extends Component  {

@@ -33,8 +33,9 @@ class HeaderHome extends Component  {
           handleQueryChange={this.props.handleQueryChange}
           handleVenueChange={this.props.handleVenueChange}
           />
+          <div className="error-message"> {this.props.state.error} </div>
         </div>
-        <div className="error-message"> {this.props.state.error} </div>
+
       </div>
     )
   }

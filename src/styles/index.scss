@@ -1,0 +1,21 @@
+@mixin centerElement() {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+@import '_App';
+@import '_header-display';
+@import '_header';
+@import '_photo-list';
+@import '_search-tips-lists';
+
+

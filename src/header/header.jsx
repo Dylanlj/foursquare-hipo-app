@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import HeaderHome   from './header-home.jsx'
 import HeaderDisplay from './header-display.jsx'
-import '../css-styles/header-display.css'
-import '../css-styles/header.css'
+
 
 class FrontPage extends Component {
 

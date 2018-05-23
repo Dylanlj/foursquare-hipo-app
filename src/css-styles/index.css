@@ -1,0 +1,594 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+@font-face {
+  font-family: gotham-extra-light;
+  src: url("../fonts/gotham/Gotham-XLight.otf") format("opentype"); }
+
+@font-face {
+  font-family: gotham-book;
+  src: url("../fonts/gotham/Gotham-Book.otf") format("opentype"); }
+
+@font-face {
+  font-family: gotham-medium;
+  src: url("../fonts/gotham/Gotham-Medium.otf") format("opentype"); }
+
+.App {
+  text-align: center;
+  z-index: 4;
+  width: 100%;
+  height: 100%; }
+
+.back-to-search {
+  cursor: pointer;
+  color: #1a2899; }
+
+.about {
+  margin: 10px 10px 30px 10px;
+  color: #999999;
+  width: 100%; }
+
+.footer-divider {
+  height: 2px;
+  width: 80%;
+  margin: 30px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e3e3e3; }
+
+.price-tier {
+  margin-left: 20px; }
+  .price-tier .base {
+    position: absolute;
+    top: 6px;
+    margin-left: 4px;
+    width: 60px;
+    height: 3px;
+    background: #000000;
+    overflow: hidden; }
+  .price-tier .tier-one {
+    z-index: 10;
+    background: #c9c5ff;
+    width: 15px; }
+  .price-tier .tier-two {
+    background: #a59fee;
+    z-index: 7;
+    width: 30px; }
+  .price-tier .tier-three {
+    background: #8b81ff;
+    z-index: 6;
+    width: 45px; }
+  .price-tier .tier-three {
+    background-color: #685dea;
+    z-index: 5;
+    width: 70px; }
+  .price-tier .bar {
+    position: absolute;
+    left: 0px;
+    height: 15px; }
+  .price-tier .material-icons {
+    transform: rotate(-45deg); }
+
+@media screen and (max-width: 600px) {
+  .about {
+    width: 90%; } }
+
+@font-face {
+  font-family: gotham-light;
+  src: url("../fonts/gotham/Gotham-Light.otf") format("opentype"); }
+
+@font-face {
+  font-family: gotham-medium;
+  src: url("../fonts/gotham/Gotham-Medium.otf") format("opentype"); }
+
+.display-venue-logo {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 420px;
+  height: 228px;
+  object-fit: contain; }
+
+.display-venue {
+  width: 100%; }
+  .display-venue .price-tier {
+    position: absolute; }
+    .display-venue .price-tier .material-icons {
+      margin-top: 2px; }
+  .display-venue .venue-image {
+    left: 0px;
+    filter: grayscale(90%); }
+
+.venue-info-bar {
+  position: absolute;
+  top: 486px;
+  width: 100%;
+  text-align: left;
+  height: 115px;
+  object-fit: contain; }
+  .venue-info-bar .material-icons {
+    font-size: 12px; }
+  .venue-info-bar .venue-info {
+    position: relative;
+    top: 10px;
+    text-align: left;
+    font-family: gotham-medium;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 14px;
+    margin-left: 13%; }
+  .venue-info-bar .background-gradient {
+    position: absolute;
+    height: 115px;
+    width: 100%;
+    opacity: 0.8;
+    background-image: linear-gradient(95deg, #1e0db4, #e44747); }
+
+.venue-title {
+  position: absolute;
+  bottom: 20px;
+  left: 13%;
+  width: 432px;
+  font-family: gotham-light;
+  font-size: 64px;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 100px; }
+
+.category-icon-square {
+  background: url(/images/classy_fabric.png);
+  position: absolute;
+  left: 49%;
+  top: 119px;
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  transform: rotate(-45deg);
+  border: 4px solid #ffc5c5; }
+  .category-icon-square .category-icon {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    left: 35px;
+    top: 35px;
+    transform: rotate(45deg);
+    filter: opacity(0.5) drop-shadow(0 0 0 #ff7070); }
+
+.venue-rating-square {
+  position: absolute;
+  top: 453px;
+  right: 15%;
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  transform: rotate(-45deg);
+  z-index: 20; }
+  .venue-rating-square .venue-rating {
+    position: absolute;
+    left: 17px;
+    top: 23px;
+    transform: rotate(45deg);
+    z-index: 40;
+    width: 33px;
+    height: 18px;
+    font-family: gotham-book;
+    font-size: 18px;
+    color: #ffffff; }
+
+@media screen and (max-width: 600px) {
+  .background.venue-image {
+    height: 516px;
+    width: 100%; }
+  .display-venue-logo {
+    left: auto;
+    right: 0px;
+    top: -7px;
+    width: 300px;
+    height: 162px; }
+  .venue-rating-square {
+    top: 483px;
+    right: 20px; }
+  .venue-info-bar {
+    top: 400px; }
+  .venue-title {
+    position: absolute;
+    bottom: 20px;
+    font-size: 50px;
+    width: 350px; }
+  .category-icon-square {
+    width: 120px;
+    height: 120px;
+    border: 2.5px solid #ffc5c5;
+    top: 95px;
+    left: auto;
+    right: 188px; }
+    .category-icon-square .category-icon {
+      left: 15px;
+      top: 15px; } }
+
+.starting-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0%; }
+
+.logo {
+  top: 100%;
+  width: 454px;
+  height: 228px;
+  object-fit: contain; }
+
+.background {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  z-index: 0; }
+
+.error-message {
+  position: relative;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  font-family: gotham-extra-light;
+  color: #ffffff;
+  font-size: 20px; }
+
+.search-form {
+  display: inline-block; }
+  .search-form .food-search {
+    width: 285px;
+    height: 45px;
+    object-fit: contain;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24);
+    padding-left: 10px;
+    margin: 10px; }
+  .search-form .place-search {
+    width: 156px;
+    height: 45px;
+    object-fit: contain;
+    font-size: 14px;
+    border-radius: 4px;
+    padding-left: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24); }
+  .search-form .search-button {
+    position: relative;
+    top: 6px;
+    width: 77px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #ff5f5f;
+    box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24);
+    border: 0px;
+    margin: 10px;
+    color: #ffffff; }
+
+@keyframes bckgUp {
+  0% {
+    height: 600px; }
+  100% {
+    height: 150px; } }
+
+@keyframes searchForm {
+  0% {
+    bottom: 110px;
+    margin-left: initial; }
+  100% {
+    bottom: 42px;
+    margin-left: 30%; } }
+
+@keyframes logoLeft {
+  0% {
+    right: 0;
+    width: 454px;
+    height: 228px; }
+  100% {
+    right: 60%;
+    width: 252px;
+    height: 124px; } }
+
+.search-found .error-message {
+  left: 10%; }
+
+.search-found .starting-info {
+  bottom: 0%;
+  height: 150px;
+  animation: bckgUp 1s; }
+
+.search-found .background {
+  width: 100%;
+  object-fit: cover;
+  height: 150px;
+  animation: bckgUp 1s; }
+
+.search-found .logo {
+  position: absolute;
+  width: 252px;
+  height: 124px;
+  top: 0px;
+  left: 0;
+  right: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  animation: logoLeft 1s; }
+
+.search-found .search-form {
+  display: inline-block;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  margin-left: 30%;
+  margin-right: auto;
+  margin-top: 30px;
+  bottom: 42px;
+  animation: searchForm 1s; }
+
+@keyframes noAnimation {}.title {
+  font-family: gotham-extra-light;
+  font-size: 55px;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ffffff; }
+
+.description {
+  width: 543px;
+  font-family: gotham-extra-light;
+  margin: auto;
+  color: #ffffff; }
+
+@media screen and (max-width: 600px) {
+  .background {
+    height: 680px; }
+  .error-message {
+    position: static;
+    margin-top: 15px;
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; }
+  .description {
+    width: 290px;
+    margin-bottom: 10px; }
+  .logo {
+    width: 280px;
+    height: 140px; }
+  .title {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 90%; }
+  .search-found .logo {
+    position: absolute;
+    width: 252px;
+    height: 124px;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; }
+  .search-found .background {
+    width: 100%;
+    object-fit: cover;
+    height: 350px; }
+  .search-found .error-message {
+    animation: noAnimation;
+    margin-top: 290px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; }
+  .search-found .starting-info {
+    animation: noAnimation; }
+  .search-found .background {
+    animation: noAnimation; }
+  .search-found .logo {
+    animation: noAnimation; }
+  .search-found .search-form {
+    margin-left: auto;
+    top: 110px;
+    animation: noAnimation; } }
+
+.photo-grid {
+  position: relative;
+  left: 13%;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-gap: 20px;
+  width: 290px; }
+  .photo-grid .photo-grid-item {
+    position: relative;
+    height: 290px;
+    width: 290px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    object-fit: contain;
+    background-color: #12195f; }
+  .photo-grid .photo-grid-image {
+    height: 290px;
+    width: 290px;
+    opacity: 1; }
+
+.show-venues .photo-grid-image {
+  opacity: 0.5; }
+
+.show-venues .divider {
+  position: absolute;
+  width: 48px;
+  height: 2.5px;
+  background: #c4c0ff;
+  bottom: 30px; }
+
+.show-venues .venue-name {
+  position: absolute;
+  bottom: 56px;
+  left: 18px;
+  width: 170px;
+  font-family: gotham-book;
+  font-size: 25px;
+  color: #ffffff;
+  text-align: left;
+  z-index: 50; }
+
+.show-venues .venue-list-rating-square {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  right: 15px;
+  bottom: -38px;
+  transform: rotate(-45deg);
+  background-color: #776cee;
+  margin-right: 0px;
+  object-fit: cover; }
+
+.show-venues .venue-list-rating-square.no-rating {
+  opacity: 0; }
+
+.show-venues .people-count {
+  position: absolute;
+  bottom: 14px;
+  left: 18px;
+  font-family: gotham-medium;
+  font-size: 12px;
+  color: #ffffff; }
+  .show-venues .people-count .material-icons {
+    font-size: 14px; }
+
+.show-venues .venue-list-rating {
+  position: relative;
+  font-family: gotham-medium;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  color: #ffffff;
+  transform: rotate(45deg);
+  left: 10px;
+  top: 16px; }
+
+.display-venue .photo-grid-item:hover {
+  cursor: auto; }
+  .display-venue .photo-grid-item:hover .photo-grid-image {
+    opacity: 0.5; }
+  .display-venue .photo-grid-item:hover .photo-of-user-container {
+    opacity: 1; }
+
+.display-venue .photo-of-user-container {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0; }
+  .display-venue .photo-of-user-container .user-name {
+    font-family: gotham-medium;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff; }
+
+.display-venue .user-photo {
+  position: relative;
+  right: 7.5px;
+  bottom: 7.5px;
+  width: 55px;
+  height: 55px;
+  transform: rotate(45deg); }
+
+.display-venue .user-photo-square {
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  transform: rotate(-45deg);
+  margin-left: auto;
+  margin-right: auto; }
+
+@media screen and (max-width: 600px) {
+  .photo-grid {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    grid-template-columns: 1fr;
+    width: 290px; } }
+
+@font-face {
+  font-family: gotham-book;
+  src: url("../fonts/gotham/Gotham-Book.otf") format("opentype"); }
+
+.item-container-list {
+  position: absolute;
+  width: 290px;
+  background-color: #ffffff;
+  box-shadow: 0 0 34px 0 rgba(255, 95, 95, 0.32);
+  padding-top: 20px;
+  padding-bottom: 30px;
+  right: 13%; }
+
+@media screen and (max-width: 600px) {
+  .item-container-list {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 20px auto 25px auto; }
+  .item-container-list.tips-container {
+    top: 0px; } }
+
+.recent-search-item {
+  cursor: pointer; }
+
+.tips-container {
+  top: 550px;
+  box-shadow: 0 0 34px 0 rgba(115, 95, 255, 0.32); }
+
+.item-list-divider {
+  border-bottom: solid 1px #e4e4e4;
+  width: 260px;
+  height: 1px;
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-top: 8px; }
+
+.item-list-title-divider {
+  width: 70px;
+  border-bottom: solid 2px #c4c0ff;
+  display: inline-block;
+  margin-bottom: 10px; }
+
+.tips-container .user-photo-square {
+  position: absolute;
+  left: 25px;
+  object-fit: contain; }
+
+.user-name.tip-text {
+  font-weight: 500;
+  font-family: gotham-medium; }
+
+.tip-text {
+  position: relative;
+  top: 12px;
+  font-family: gotham-book;
+  font-size: 14px;
+  color: #9b9b9b;
+  text-align: left;
+  margin: 0px 20px 12px 100px; }
+
+.all-tips-button {
+  margin-top: 5px;
+  cursor: pointer; }

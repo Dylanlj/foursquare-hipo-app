@@ -1,3 +1,5 @@
+
+
 .starting-info {
   position: absolute;
   left: 0;
@@ -99,7 +101,6 @@
 .search-found {
 
   .error-message {
-    bottom: 40px;
     left: 10%;
   }
   .starting-info {
@@ -142,34 +143,6 @@
 
 }
 
-@media screen and (max-width: 600px) {
-  .search-found {
-    .error-message {
-      animation: noAnimation;
-
-    }
-    .starting-info {
-      animation: noAnimation;
-    }
-    .background {
-      animation: noAnimation;
-
-    }
-    .logo {
-      animation: noAnimation;
-
-    }
-    .search-form {
-      margin-left: auto;
-      top: 160px;
-      bottom: 2px;
-      animation: noAnimation;
-
-    }
-
-  }
-}
-
 
  .title {
     font-family: gotham-extra-light;
@@ -189,16 +162,30 @@
 
 
 @media screen and (max-width: 600px) {
+  #root {
+    // height: 100%
+  }
+  .background {
+    height: 680px;
+  }
+  .error-message {
+    position: static;
+    margin-top: 15px;
+    width: 90%;
+    @include centerElement();
+  }
   .description {
     width: 290px;
     margin-bottom: 10px;
   }
   .logo {
-    width: 320px;
-    height: 160px;
+    width: 280px;
+    height: 140px;
   }
   .title {
+    @include centerElement();
     margin-top: 10px;
+    width: 90%;
   }
 
   .search-found {
@@ -207,25 +194,37 @@
       width: 252px;
       height: 124px;
       top: 0px;
-      left: 0;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
+      @include centerElement();
     }
     .background {
       width: 100%;
       object-fit: cover;
       height: 350px;
     }
-    .search-form {
-      position: absolute;
-      right: 0%;
-      left: 0%;
-      margin-right: auto;
-      margin-top: auto;
-      bottom: 20px;
-    }
-  }
 
+    .error-message {
+      animation: noAnimation;
+      margin-top: 290px;
+      @include centerElement();
+    }
+    .starting-info {
+      animation: noAnimation;
+    }
+    .background {
+      animation: noAnimation;
+
+    }
+    .logo {
+      animation: noAnimation;
+
+    }
+    .search-form {
+      margin-left: auto;
+      top: 110px;
+      animation: noAnimation;
+
+    }
+
+  }
 }
 

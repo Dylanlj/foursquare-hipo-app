@@ -160,7 +160,8 @@ $responsiveImageHeight: 516px;
     height: 120px;
     border: 2.5px solid #ffc5c5;
     top: 95px;
-    left: 90px;
+    left: auto;
+    right: 188px;
 
     .category-icon {
       left: 15px;
@@ -170,6 +171,9 @@ $responsiveImageHeight: 516px;
 }
 
 
+@media screen and (max-height: 600px) {
 
+
+}
 
 
