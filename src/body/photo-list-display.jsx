@@ -33,7 +33,7 @@ class PhotoListDisplay extends Component {
     }
     let style = {gridTemplateRows: `repeat(${list.length}, auto)`}
     return (
-      <div className="display-venue">
+      <div className="display-venue-body">
         <Tips venueTips={this.props.state.displayingVenue.tips.groups}/>
         <div className="photo-grid" style={style}>
           {list}

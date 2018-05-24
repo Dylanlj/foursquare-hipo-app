@@ -28,7 +28,10 @@ body {
 .about {
   margin: 10px 10px 30px 10px;
   color: #999999;
-  width: 100%; }
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto; }
 
 .footer-divider {
   height: 2px;
@@ -180,26 +183,13 @@ body {
     font-size: 18px;
     color: #ffffff; }
 
-@media screen and (max-width: 600px) {
-  .background.venue-image {
-    height: 516px;
-    width: 100%; }
+@media screen and (max-width: 845px) {
   .display-venue-logo {
     left: auto;
     right: 0px;
     top: -7px;
     width: 300px;
     height: 162px; }
-  .venue-rating-square {
-    top: 483px;
-    right: 20px; }
-  .venue-info-bar {
-    top: 400px; }
-  .venue-title {
-    position: absolute;
-    bottom: 20px;
-    font-size: 50px;
-    width: 350px; }
   .category-icon-square {
     width: 120px;
     height: 120px;
@@ -210,6 +200,21 @@ body {
     .category-icon-square .category-icon {
       left: 15px;
       top: 15px; } }
+
+@media screen and (max-width: 600px) {
+  .background.venue-image {
+    height: 516px;
+    width: 100%; }
+  .venue-rating-square {
+    top: 483px;
+    right: 20px; }
+  .venue-info-bar {
+    top: 400px; }
+  .venue-title {
+    position: absolute;
+    bottom: 20px;
+    font-size: 50px;
+    width: 350px; } }
 
 .starting-info {
   position: absolute;
@@ -231,7 +236,6 @@ body {
 
 .error-message {
   position: relative;
-  bottom: 80px;
   left: 0;
   right: 0;
   font-family: gotham-extra-light;
@@ -327,11 +331,10 @@ body {
   left: 0%;
   margin-left: 30%;
   margin-right: auto;
-  margin-top: 30px;
   bottom: 42px;
   animation: searchForm 1s; }
 
-@keyframes noAnimation {}.title {
+.title {
   font-family: gotham-extra-light;
   font-size: 55px;
   font-weight: 200;
@@ -345,7 +348,7 @@ body {
   margin: auto;
   color: #ffffff; }
 
-@media screen and (max-width: 600px) {
+@keyframes noAnimation {}@media screen and (max-width: 845px) {
   .background {
     height: 680px; }
   .error-message {
@@ -397,12 +400,11 @@ body {
     animation: noAnimation; }
   .search-found .search-form {
     margin-left: auto;
-    top: 110px;
+    top: 140px;
     animation: noAnimation; } }
 
 .photo-grid {
   position: relative;
-  left: 13%;
   margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -423,99 +425,112 @@ body {
     width: 290px;
     opacity: 1; }
 
-.show-venues .photo-grid-image {
-  opacity: 0.5; }
-
-.show-venues .divider {
-  position: absolute;
-  width: 48px;
-  height: 2.5px;
-  background: #c4c0ff;
-  bottom: 30px; }
-
-.show-venues .venue-name {
-  position: absolute;
-  bottom: 56px;
-  left: 18px;
-  width: 170px;
-  font-family: gotham-book;
-  font-size: 25px;
-  color: #ffffff;
-  text-align: left;
-  z-index: 50; }
-
-.show-venues .venue-list-rating-square {
-  position: absolute;
-  width: 75px;
-  height: 75px;
-  right: 15px;
-  bottom: -38px;
-  transform: rotate(-45deg);
-  background-color: #776cee;
-  margin-right: 0px;
-  object-fit: cover; }
-
-.show-venues .venue-list-rating-square.no-rating {
-  opacity: 0; }
-
-.show-venues .people-count {
-  position: absolute;
-  bottom: 14px;
-  left: 18px;
-  font-family: gotham-medium;
-  font-size: 12px;
-  color: #ffffff; }
-  .show-venues .people-count .material-icons {
-    font-size: 14px; }
-
-.show-venues .venue-list-rating {
-  position: relative;
-  font-family: gotham-medium;
-  font-size: 15px;
-  font-weight: 500;
-  text-align: center;
-  color: #ffffff;
-  transform: rotate(45deg);
-  left: 10px;
-  top: 16px; }
-
-.display-venue .photo-grid-item:hover {
-  cursor: auto; }
-  .display-venue .photo-grid-item:hover .photo-grid-image {
-    opacity: 0.5; }
-  .display-venue .photo-grid-item:hover .photo-of-user-container {
-    opacity: 1; }
-
-.display-venue .photo-of-user-container {
-  position: absolute;
-  top: 120px;
+.show-venues {
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0; }
-  .display-venue .photo-of-user-container .user-name {
-    font-family: gotham-medium;
-    font-size: 14px;
-    text-align: center;
-    color: #ffffff; }
-
-.display-venue .user-photo {
   position: relative;
-  right: 7.5px;
-  bottom: 7.5px;
-  width: 55px;
-  height: 55px;
-  transform: rotate(45deg); }
+  width: 940px; }
+  .show-venues .photo-grid-image {
+    opacity: 0.5; }
+  .show-venues .divider {
+    position: absolute;
+    width: 48px;
+    height: 2.5px;
+    background: #c4c0ff;
+    bottom: 30px; }
+  .show-venues .venue-name {
+    position: absolute;
+    bottom: 56px;
+    left: 18px;
+    width: 170px;
+    font-family: gotham-book;
+    font-size: 25px;
+    color: #ffffff;
+    text-align: left;
+    z-index: 50; }
+  .show-venues .venue-list-rating-square {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    right: 15px;
+    bottom: -38px;
+    transform: rotate(-45deg);
+    background-color: #776cee;
+    margin-right: 0px;
+    object-fit: cover; }
+  .show-venues .venue-list-rating-square.no-rating {
+    opacity: 0; }
+  .show-venues .people-count {
+    position: absolute;
+    bottom: 14px;
+    left: 18px;
+    font-family: gotham-medium;
+    font-size: 12px;
+    color: #ffffff; }
+    .show-venues .people-count .material-icons {
+      font-size: 14px; }
+  .show-venues .venue-list-rating {
+    position: relative;
+    font-family: gotham-medium;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+    transform: rotate(45deg);
+    left: 10px;
+    top: 16px; }
 
-.display-venue .user-photo-square {
-  overflow: hidden;
-  width: 40px;
-  height: 40px;
-  margin-bottom: 10px;
-  transform: rotate(-45deg);
+.display-venue-body {
+  left: 0;
+  right: 0;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  position: relative;
+  width: 940px; }
+  .display-venue-body .photo-grid-item:hover {
+    cursor: auto; }
+    .display-venue-body .photo-grid-item:hover .photo-grid-image {
+      opacity: 0.5; }
+    .display-venue-body .photo-grid-item:hover .photo-of-user-container {
+      opacity: 1; }
+  .display-venue-body .photo-of-user-container {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0; }
+    .display-venue-body .photo-of-user-container .user-name {
+      font-family: gotham-medium;
+      font-size: 14px;
+      text-align: center;
+      color: #ffffff; }
+  .display-venue-body .user-photo {
+    position: relative;
+    right: 7.5px;
+    bottom: 7.5px;
+    width: 55px;
+    height: 55px;
+    transform: rotate(45deg); }
+  .display-venue-body .user-photo-square {
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    transform: rotate(-45deg);
+    margin-left: auto;
+    margin-right: auto; }
+
+@media screen and (max-width: 950px) {
+  .display-venue-body {
+    width: 600px; }
+  .show-venues {
+    width: 600px; }
+  .photo-grid {
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 600px) {
   .photo-grid {
@@ -525,8 +540,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    grid-template-columns: 1fr;
-    width: 290px; } }
+    width: 290px; }
+  .display-venue-body {
+    width: 100%; }
+  .show-venues {
+    width: 100%; } }
 
 @font-face {
   font-family: gotham-book;
@@ -539,7 +557,7 @@ body {
   box-shadow: 0 0 34px 0 rgba(255, 95, 95, 0.32);
   padding-top: 20px;
   padding-bottom: 30px;
-  right: 13%; }
+  right: 0px; }
 
 @media screen and (max-width: 600px) {
   .item-container-list {
@@ -554,7 +572,6 @@ body {
   cursor: pointer; }
 
 .tips-container {
-  top: 550px;
   box-shadow: 0 0 34px 0 rgba(115, 95, 255, 0.32); }
 
 .item-list-divider {

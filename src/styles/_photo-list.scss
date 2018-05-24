@@ -2,7 +2,7 @@
 
 .photo-grid {
   position: relative;
-  left: 13%;
+  // right: -20%;
   margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -28,8 +28,13 @@
   }
 }
 
+
+
 // exclusive for the venues from the search
 .show-venues {
+  @include centerElement();
+  position: relative;
+  width: 940px;
   .photo-grid-image {
     opacity: 0.5;
   }
@@ -95,7 +100,11 @@
 
 
 //exclusive to when displaying a venue
-.display-venue {
+.display-venue-body {
+  @include centerElement();
+  position: relative;
+  width: 940px;
+
   .photo-grid-item:hover {
     cursor: auto;
     .photo-grid-image {
@@ -141,13 +150,30 @@
 
 }
 
+@media screen and (max-width: 950px) {
+  .display-venue-body {
+    width: 600px;
+  }
+  .show-venues {
+    width: 600px;
+  }
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .photo-grid {
     position: relative;
     @include centerElement();
     margin-top: 20px;
-    grid-template-columns: 1fr;
     width: 290px;
+  }
+  .display-venue-body {
+    width: 100%;
+  }
+  .show-venues {
+    width: 100%;
   }
 }
 

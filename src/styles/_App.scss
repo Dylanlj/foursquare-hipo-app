@@ -31,7 +31,7 @@
 .about {
   margin: 10px 10px 30px 10px;
   color: #999999;
-  width: 100%;
+  @include centerElement();
 }
 
 .footer-divider {
