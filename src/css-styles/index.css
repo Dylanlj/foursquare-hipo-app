@@ -349,8 +349,6 @@ body {
   color: #ffffff; }
 
 @keyframes noAnimation {}@media screen and (max-width: 845px) {
-  .background {
-    height: 680px; }
   .error-message {
     position: static;
     margin-top: 15px;
