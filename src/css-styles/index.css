@@ -348,6 +348,11 @@ body {
   margin: auto;
   color: #ffffff; }
 
+@media screen and (max-width: 845px) {
+  .logo {
+    width: 52%;
+    height: 28%; } }
+
 @keyframes noAnimation {}@media screen and (max-width: 845px) {
   .error-message {
     position: static;
@@ -360,9 +365,6 @@ body {
   .description {
     width: 290px;
     margin-bottom: 10px; }
-  .logo {
-    width: 280px;
-    height: 140px; }
   .title {
     left: 0;
     right: 0;
@@ -375,6 +377,7 @@ body {
     width: 252px;
     height: 124px;
     top: 0px;
+    animation: noAnimation;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -393,8 +396,6 @@ body {
   .search-found .starting-info {
     animation: noAnimation; }
   .search-found .background {
-    animation: noAnimation; }
-  .search-found .logo {
     animation: noAnimation; }
   .search-found .search-form {
     margin-left: auto;

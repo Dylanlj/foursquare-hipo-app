@@ -1,7 +1,7 @@
 Foursquare App
 =====================
 
-A single page React app that lets users search venues by location and query phrases, users can then choose a venue and see additional photos, details, and tips regarding the venue
+A single page responsive React app that lets users search venues by location and query phrases, users can then choose a venue and see additional photos, details, and tips regarding the venue. Can be viewed online at https://stark-shore-28978.herokuapp.com/
 
 ## Screenshots
 !["Opening page"](https://github.com/Dylanlj/foursquare-hipo-app/blob/master/docs/front-search.png)
